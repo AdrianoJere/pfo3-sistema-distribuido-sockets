@@ -7,7 +7,7 @@ guardan en un almacenamiento compartido y vuelven al cliente que los pidió.
 
 ## Diagrama del sistema
 
-![Arquitectura distribuida](diagrama_sistema.svg)
+![Arquitectura distribuida](docs/diagrama_sistema.svg)
 
 ## Qué representa cada componente en el código
 
@@ -31,7 +31,9 @@ configurar servicios externos:
 - `worker.py`: proceso worker con su pool de hilos. Se pueden iniciar varios.
 - `cliente.py`: cliente de consola que envía tareas y muestra el resultado y qué worker/hilo lo procesó.
 - `prueba_carga.py`: dispara varias tareas en paralelo y muestra cómo se reparten entre los workers.
-- `diagrama_sistema.svg`: diagrama de la arquitectura distribuida.
+- `docs/diagrama_sistema.svg`: diagrama de la arquitectura distribuida.
+- `docs/PFO3_Documentacion_y_Pruebas.pdf`: documentación con el detalle y las pruebas.
+- `capturas/`: capturas de las pruebas de reparto y tolerancia a fallos.
 
 ## Requisitos
 
