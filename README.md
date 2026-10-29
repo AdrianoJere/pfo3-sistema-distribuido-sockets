@@ -33,7 +33,7 @@ configurar servicios externos:
 - `prueba_carga.py`: dispara varias tareas en paralelo y muestra cómo se reparten entre los workers.
 - `docs/diagrama_sistema.svg`: diagrama de la arquitectura distribuida.
 - `docs/PFO3_Documentacion_y_Pruebas.pdf`: documentación con el detalle y las pruebas.
-- `capturas/`: capturas de las pruebas de reparto y tolerancia a fallos.
+- `docs/prueba_reparto.png` y `docs/tolerancia_fallos.png`: capturas de las pruebas.
 
 ## Requisitos
 
@@ -101,7 +101,7 @@ Servidor, dos workers (Worker-A con 2 hilos y Worker-B con 4) y `prueba_carga.py
 corriendo a la vez en cinco terminales. Las 12 tareas se repartieron 4 y 8
 (proporcional a los hilos de cada worker) y terminaron en 1,1 s:
 
-![Prueba de reparto entre workers](capturas/prueba_reparto.png)
+![Prueba de reparto entre workers](docs/prueba_reparto.png)
 
 ### Tolerancia a fallos
 
@@ -110,7 +110,7 @@ Con `DEMORA_SIMULADA = 5` en `worker.py` (para tener tiempo de actuar), se lanza
 servidor detectó la desconexión y re-encoló las 2 tareas que tenía en curso
 (`Tareas re-encoladas: 2`); Worker-B las completó junto con el resto.
 
-![Tolerancia a fallos](capturas/tolerancia_fallos.png)
+![Tolerancia a fallos](docs/tolerancia_fallos.png)
 
 ## Limitaciones conocidas
 
